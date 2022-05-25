@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    
+    background-image: url("assets/background.png");
+    background-color: #5c94fc;
+    overscroll-behavior-y: none;
+
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.fadeOverlay{
+    
+    top: 0;
+    left: 0;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#mario{
+    width: 20%;
+    position: fixed;
+    bottom: 10%;
+}
+
+#instructions{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projectList{
+    padding-top: 20%;
+    padding-bottom: 20%;
+    position: absolute;
+    left: 40%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+
+.projectList>img {
+    width: 100%;
+}

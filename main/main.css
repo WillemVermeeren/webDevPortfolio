@@ -1,0 +1,23 @@
+
+* {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    
+}
+
+body{
+  overscroll-behavior-y: none;
+  background-color: black;
+}
+
+#mario{
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+canvas{
+  opacity: 0;
+}
+
