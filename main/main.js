@@ -1,8 +1,16 @@
 // TODO
 // -clean code
 
+//----------------the urls, change to your liking----------------------------
+const projectsUrl = "http://127.0.0.1:5500/projects/projects.html"
+const aboutMeUrl = "http://127.0.0.1:5500/aboutMe/aboutMe.html"
+//---------------------------------------------------------------------------
 
 //------------misc stuff for startup------------------
+
+
+
+
 
 const fps = 30 // frames/s (effects: movements speed)
 const floorHeigth = 512 // the height from the bottom of the image to the mainfloor 
@@ -307,7 +315,7 @@ class backGround{   // background data
                 "y1":184  ,
                 "y2":0,
                 "type": "pipe", 
-                "adress": "http://127.0.0.1:5500/projects/projects.html"
+                "adress": projectsUrl
             },
             {
                 "x1": 1984,  
@@ -315,7 +323,7 @@ class backGround{   // background data
                 "y1":120  ,
                 "y2":0,
                 "type": "pipe", 
-                "adress": "http://127.0.0.1:5500/aboutMe/aboutMe.html"
+                "adress": aboutMeUrl
             },
             
             {
