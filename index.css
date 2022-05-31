@@ -15,8 +15,13 @@ h1, h2, h3{
     width: 60%;
 }
 
+h2{
+    font-size: 1.2rem;
+}
+
 h3{
     font-size: 1.5rem;
+    bottom: 1rem;
 }
 
 .column{

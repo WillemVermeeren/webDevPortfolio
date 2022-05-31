@@ -37,5 +37,14 @@ window.onload = () => {
         },40)
 
     })
+    const instruction = document.getElementsByClassName("instruction")
+    let instructionOpacity = 1
+    setInterval(function(){
+        instructionOpacity = 1-instructionOpacity //makes it switch between 1 and 0
+        for(i=0;i<instruction.length;i++){
+            instruction[i].style.opacity = instructionOpacity.toString()
+        }
+        
+    }, 1000)
     
 }

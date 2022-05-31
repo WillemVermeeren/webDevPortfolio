@@ -37,14 +37,17 @@ window.onload = () => {
 
     },50)
     setTimeout(function(){
+        let escapeState = 0
 
         document.addEventListener("keyup", (key) => {
 
-            if(key.key=="Escape"){
+            if(key.key=="Escape"&&escapeState==0){
+                escapeState = 1
+                
                 fadeOut("http://127.0.0.1:5500/main/main.html?x=1099&y=184")
 
             }
-        }, {once: true})
+        })
     },1500)
     marioAnimation() 
     
