@@ -1,3 +1,8 @@
+//----------------the urls, change to your liking----------------------------
+const mainUrl = "http://127.0.0.1:5500/main/main.html?x=1989&y=120"
+//---------------------------------------------------------------------------
+
+
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);      //makes sure the page is on 0 0
 }; 
@@ -127,7 +132,7 @@ window.onload = () => {
                     }
                     if(fadeAmount>=1.5){
                         clearInterval(fadeIn)
-                        window.location.replace("http://127.0.0.1:5500/main/main.html?x=1989&y=120")
+                        window.location.replace(mainUrl)
                     }
                 },40)
             }
