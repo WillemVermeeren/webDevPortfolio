@@ -1,3 +1,8 @@
+
+//----------------the urls, change to your liking----------------------------
+const mainUrl = "http://127.0.0.1:5500/main/main.html?x=1099&y=184"     
+//---------------------------------------------------------------------------
+
 function fadeIn(){
     const fadeElements = document.getElementsByClassName("fadeOverlay")
     var fadeAmount = 1.5;
@@ -44,7 +49,7 @@ window.onload = () => {
             if(key.key=="Escape"&&escapeState==0){
                 escapeState = 1
                 
-                fadeOut("http://127.0.0.1:5500/main/main.html?x=1099&y=184")
+                fadeOut(mainUrl)
 
             }
         })
