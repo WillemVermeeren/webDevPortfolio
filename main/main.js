@@ -180,7 +180,7 @@ class player{
                     colY = bg.collision[i].y1
                 }
 
-                if((this.coords.y==bg.collision[i].y1)&&(bg.collision[i].type=="pipe")&&(this.coords.x+this.size<bg.collision[i].x2)&&(this.coords.x> bg.collision[i].x1)){
+                if((this.coords.y==bg.collision[i].y1)&&(bg.collision[i].type=="pipe")&&(this.coords.x+this.size-40<bg.collision[i].x2)&&(this.coords.x+40> bg.collision[i].x1)){
 
                     mario.onPipe.state=true
                     mario.onPipe.url=bg.collision[i].adress
@@ -306,7 +306,7 @@ class backGround{   // background data
         //creates background image
         this.bgImage = newImage({src: backGround})
         this.pipeImg = newImage({src: pipeImg})
-        
+        this.enterImage = newImage({src: "assets/pressToEnter.png"})        
 
         this.collision = [  //the collision boxes of elements with one being left up and 2 right bottom
             {
@@ -318,7 +318,7 @@ class backGround{   // background data
                 "adress": projectsUrl
             },
             {
-                "x1": 1984,  
+                "x1": 1999,  
                 "x2": 2112,  
                 "y1":120  ,
                 "y2":0,
@@ -429,6 +429,12 @@ class backGround{   // background data
 
         ctx.drawImage(this.pipeImg, this.position.x, this.position.y+this.offset.y-this.bgImage.height, this.pipeImg.width*this.scale, this.pipeImg.height*this.scale);
     }
+    drawInstructions(){
+        if(mario.onPipe.state){
+            ctx.drawImage(this.enterImage, (c.width-this.enterImage.width*this.scale)/2, 50, this.enterImage.width, this.enterImage.height)
+        }
+    }
+    
 
 }
 
@@ -458,6 +464,7 @@ function main(){
         bg.drawBack() //draws the elements on the screen
         mario.draw()
         bg.drawPipes()
+        bg.drawInstructions()
     }
 
 
